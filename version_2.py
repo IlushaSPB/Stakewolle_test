@@ -44,7 +44,7 @@ def get_page_from_hash(driver, hash):
     driver.execute_script('window.scroll(0,document.body.scrollHeight)')
 
 
-# получить хей из элемента
+# получить хеш из элемента
 def get_hash(element):
     desired_value = None
     parts = element[0].split()
@@ -52,7 +52,7 @@ def get_hash(element):
     return desired_value
 
 
-# собрать и выводим детали транзакции в словарь
+# собрать и вывести детали транзакции в словарь
 def tx_detail(soup):
     values = {}
     for n in range(5, 12):
@@ -91,7 +91,7 @@ def tx_detail(soup):
     print(values)
 
 
-# перебрать значения хешей и собираем информацию
+# перебрать значения хешей и собрать информацию
 def get_content_from_hash(hashes):
     driver = init_driver()
 
